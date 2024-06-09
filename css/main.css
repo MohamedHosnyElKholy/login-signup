@@ -1,0 +1,98 @@
+/* Start Reset Page */
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #24353f !important;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Start Reset Page  */
+/* Start Component */
+/* End Component */
+.card{
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+  background-color: #24353f !important;
+}
+.heading{
+  color: #17a2b8;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.5rem;
+}
+input{
+  margin: .44rem 0 !important;
+  padding: .375rem .75rem;
+  outline: none;
+  border: 0.5px solid white;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  color: #fff;
+}
+input:focus{
+  border-color: #80bdff;
+}
+input::placeholder{
+  color: #cccccc5b;
+}
+a{
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+a:hover{
+  text-decoration-line: underline !important;
+  -moz-text-decoration-line: underline !important;
+}
+.navbar-collapse{
+  flex-grow: 0 !important;
+}
+nav{
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+.logout{
+  color: rgba(255,255,255,.5)   !important;
+}
+#welc{
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    margin: auto;
+}
+.nameinp,.emileinp,.passinp{
+  background-color: transparent;
+}
+.lighting{
+  background-color: green !important;
+    border: 1px solid transparent;
+}
+.lighting-re{
+  background-color: red !important;
+}

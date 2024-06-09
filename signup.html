@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <title>Login</title>
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="login-in w-75 m-auto mt-5 mb-3">
+      <div class="container">
+        <div class="card p-5 rounded-0">
+          <h1 class="text-center heading">Smart Login System</h1>
+          <!-- <form> -->
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="nameinp w-100 rounded-1"
+            placeholder="Enter Your Name"
+            oninput= valdtions(this)
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="emileinp w-100 rounded-1 "
+            placeholder="Enter Your Email"
+            oninput= valdtions(this)
+          />
+          <input
+            type="password"
+            name="pass"
+            id="passs"
+            class="passinp w-100 rounded-1 "
+            placeholder="Enter Your Password"
+            oninput= valdtions(this)
+          />
+          <div id="exit">
+           
+          </div>
+          <!-- <div id="demo">
+            <span class="text-success text-center fs-4 fw-bold m-3"></span>
+          </div> -->
+          <button class="btn btn-outline-info w-100 my-3 btnsign">
+            Sign Up
+          </button>
+          <p class="text-center text-white fw-bold">
+            Don’t have an account?
+            <a class="anchor clicksign text-light text-decoration-none" href="#"
+              >Sign Up</a
+            >
+          </p>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+    <script src="./js/signup.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+  </body>
+</html>
