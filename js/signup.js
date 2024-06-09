@@ -17,36 +17,35 @@ let arr = JSON.parse(localStorage.getItem('user')) || [];
 // دالة للتحقق من صحة المدخلات
 function valdtions(element) {
   let data = {
-    name: /^[A-Za-z\s\-]{3,50}$/,  // تحقق من الاسم
-    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,  // تحقق من البريد الإلكتروني
-    passs: /^\d{7}$/,  // تحقق من كلمة المرور
+    name: /^[A-Za-z\s\-]{3,50}$/, 
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,  
+    passs: /^\d{7}$/, 
   };
 
-  if (data[element.id].test(element.value)) {  // إذا كانت المدخلات صالحة
+  if (data[element.id].test(element.value)) {  
     element.classList.add("lighting");
     element.classList.remove("lighting-re");
     return true;
-  } else {  // إذا كانت المدخلات غير صالحة
+  } else { 
     element.classList.add("lighting-re");
     element.classList.remove("lighting");
     return false;
   }
 }
-// دالة لإضافة المستخدم إلى localStorage إذا كانت المدخلات صحيحة
+
 function getUser() {
-  // إعادة تعيين الرسالة قبل التحقق من صحة الحقول
   let cartona = "";
 
-  let isValidName = valdtions(nameinp);  // تحقق من صحة الاسم
-  let isValidEmail = valdtions(emileinp);  // تحقق من صحة البريد الإلكتروني
-  let isValidPass = valdtions(passinp);  // تحقق من صحة كلمة المرور
+  let isValidName = valdtions(nameinp);  
+  let isValidEmail = valdtions(emileinp);  
+  let isValidPass = valdtions(passinp);  
 
-  // تحقق من أن جميع الحقول ممتلئة
+
   if (nameinp.value === "" || emileinp.value === "" || passinp.value === "") {
     cartona = `
       <h4 class="text-danger">All inputs are required. Please fill in all fields.</h4>
     `;
-  } else if (isValidName && isValidEmail && isValidPass) {  // إذا كانت جميع المدخلات صالحة
+  } else if (isValidName && isValidEmail && isValidPass) {  
     let emailExists = false;
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].email === emileinp.value) {
@@ -69,14 +68,14 @@ function getUser() {
       cartona = `
         <h4 class="text-info">Success</h4>
       `;
-      localStorage.setItem('user', JSON.stringify(arr));  // إضافة المستخدم إلى localStorage
+      localStorage.setItem('user', JSON.stringify(arr));  
     }
-  } else {  // إذا كانت أي من المدخلات غير صالحة
+  } else {  
     cartona = `
       <h4 class="text-danger">Some inputs are not valid. Please check your inputs.</h4>
     `;
   }
-  document.getElementById("exit").innerHTML = cartona;  // عرض الرسالة للمستخدم
+  document.getElementById("exit").innerHTML = cartona; 
 }
 
-clicksignbtn.addEventListener("click", getUser);  // ربط الزر بدالة getUser
+clicksignbtn.addEventListener("click", getUser);  
