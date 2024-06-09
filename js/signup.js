@@ -1,20 +1,20 @@
-// الانتقال إلى صفحة التسجيل عند النقر على الرابط
+
 let anchors = document.querySelector(".anchor");
 anchors.addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href = "index.html";
 });
 
-// عناصر الإدخال
+
 const nameinp = document.querySelector(".nameinp");
 const emileinp = document.querySelector(".emileinp");
 const passinp = document.querySelector(".passinp");
 const clicksignbtn = document.querySelector(".btnsign");
 
-// مصفوفة المستخدمين
+
 let arr = JSON.parse(localStorage.getItem('user')) || [];
 
-// دالة للتحقق من صحة المدخلات
+
 function valdtions(element) {
   let data = {
     name: /^[A-Za-z\s\-]{3,50}$/, 
