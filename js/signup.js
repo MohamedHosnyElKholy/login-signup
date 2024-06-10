@@ -1,19 +1,16 @@
-
 let anchors = document.querySelector(".anchor");
 anchors.addEventListener("click", function (e) {
   e.preventDefault();
+  localStorage.setItem('newWord', 'Sign Up');
   window.location.href = "index.html";
 });
-
 
 const nameinp = document.querySelector(".nameinp");
 const emileinp = document.querySelector(".emileinp");
 const passinp = document.querySelector(".passinp");
 const clicksignbtn = document.querySelector(".btnsign");
 
-
 let arr = JSON.parse(localStorage.getItem('user')) || [];
-
 
 function valdtions(element) {
   let data = {
@@ -39,7 +36,6 @@ function getUser() {
   let isValidName = valdtions(nameinp);  
   let isValidEmail = valdtions(emileinp);  
   let isValidPass = valdtions(passinp);  
-
 
   if (nameinp.value === "" || emileinp.value === "" || passinp.value === "") {
     cartona = `
@@ -78,4 +74,12 @@ function getUser() {
   document.getElementById("exit").innerHTML = cartona; 
 }
 
-clicksignbtn.addEventListener("click", getUser);  
+clicksignbtn.addEventListener("click", getUser);
+
+window.addEventListener('load', function() {
+  let newWord = localStorage.getItem('newWord');
+  if (newWord) {
+    document.querySelector('.clicksign').innerHTML = newWord;
+    localStorage.removeItem('newWord');
+  }
+});
